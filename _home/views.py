@@ -14,10 +14,3 @@ async def get_index(request: Request):
         "request": request
         })
 
-
-@home_router.get("/trades")
-async def get_index(request: Request):
-    return templates.TemplateResponse("trades.html", {
-        "request": request
-        })
-
