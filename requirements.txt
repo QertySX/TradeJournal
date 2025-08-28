@@ -1,2 +1,7 @@
 MetaTrader5
 aiohttp
+dotenv
+fastapi
+logging
+uvicorn
+jinja2
