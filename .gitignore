@@ -1,1 +1,59 @@
 .venv
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter / IPython
+.ipynb_checkpoints
+
+# C / C++ headers or binaries
+*.o
+*.obj
+*.exe
+*.dll
+*.lib
+*.so
+*.dylib
+*.a
+*.h
+*.out
+
+# Logs / databases
+*.log
+*.sql
+*.sqlite
+*.db
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node / JS (если вдруг есть фронтенд)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Custom unwanted files
+EVM*
+WAN*
+pi.h
+.env
