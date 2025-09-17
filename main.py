@@ -1,4 +1,3 @@
-from fastapi import FastAPI
 import uvicorn
 from urls import app
 from fastapi.staticfiles import StaticFiles
