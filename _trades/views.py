@@ -1,4 +1,4 @@
-from fastapi import FastAPI, APIRouter, Request
+from fastapi import APIRouter, Request
 import logging
 from fastapi.templating import Jinja2Templates
 
@@ -9,7 +9,7 @@ templates = Jinja2Templates(directory="templates")
 
 
 @trades_router.get("/trades")
-async def get_index(request: Request):
+async def index(request: Request):
     return templates.TemplateResponse("trades.html", {
         "request": request
         })
