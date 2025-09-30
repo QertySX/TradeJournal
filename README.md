@@ -25,7 +25,7 @@
 В процесі розробки.
 
 
-**Example:**
+## Example:
 
 GET /index
 ![Головна сторінка](screenshots/1.png)
