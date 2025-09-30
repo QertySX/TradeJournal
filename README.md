@@ -19,6 +19,7 @@
 Планую додати: 
 - Redis
 - Celery
+- Docker, docker-compose
 
 
 ## Установка та запуск
