@@ -20,6 +20,8 @@
 - Redis
 - Celery
 - Docker, docker-compose
+- OAuth 2.0 (авторизация)
+- JWT (JSON Web Token)
 
 
 ## Установка та запуск
