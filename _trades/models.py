@@ -4,6 +4,8 @@ from sqlalchemy.orm import relationship, Mapped, mapped_column
 from database.base import Base
 
 
+
+
 class Trades(Base):
     __tablename__ = 'trades'
 
