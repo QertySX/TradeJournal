@@ -47,21 +47,26 @@
           </li>
         </ul>
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item dropdown d-none d-lg-block user-dropdown">
-            <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="rounded-circle" src="static/images/faces/images_for_profile.png" alt="Profile image" style="width: 40px; height: 40px;"> 
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+            <div>
+            {% if user %}
+            <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+              <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="rounded-circle" src="static/images/faces/images_for_profile.png" alt="Profile image" style="width: 40px; height: 40px;"> 
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
               <div class="dropdown-header text-center">
                 <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
                 <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
               </div>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile</a>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i> Activity</a>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-settings-outline text-primary me-2"></i>Account settings</a>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i> FAQ</a>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
+              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i>Профіль</a>
+              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-settings-outline text-primary me-2"></i>Налаштування</a>
+              <a href="/logout" class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Вийти</a>
             </div>
+            {% else %}
+              <a href="/register" class="dropdown-item">Реєстрація</a>
+              <a href="/login" class="dropdown-item">Вхід</a>
+            {% endif %}
+          </div>
           </li>
         </ul>
       </div>
