@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main-panel">        
+  <div class="content-wrapper" style="margin-left: 350px; text-align: center;">
+    <div class="row">
+      <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Авторизація</h4>
+            <br>
+
+            <form id="login-form" class="forms-sample" method="post">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" class="form-control" id="username" placeholder="Username" style="text-align: center;">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" id="password" placeholder="Password" style="text-align: center;">
+              </div>
+              <button id="submit-btn" type="submit" class="btn btn-primary me-2">Увійти</button>
+              <a href="/index" class="btn btn-light">Cancel</a>
+              <div id="auth-message" style="margin-top: 10px;"></div>
+            </form>
+            <br>
+            <br>
+            <a href="/register">Ще не зареєстровані?</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ url_for('static', path='/js/signin/signin_validation.js') }}"></script>
+
+
+{% endblock %}
