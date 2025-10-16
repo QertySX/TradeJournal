@@ -1,122 +1,236 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block content %}
-<!-- Статистика сверху -->
-<div class="row">
-  <div class="col-sm-12">
-    <div class="statistics-details d-flex align-items-center justify-content-between">
-      <div>
-        <p class="statistics-title">Balance</p>
-        <h3 class="rate-percentage">22 700$</h3>
-        <p class="text-success d-flex"><i class="mdi mdi-menu-down"></i><span>1.31%</span></p>
-      </div>
-      <div>
-        <p class="statistics-title">Winrate %</p>
-        <h3 class="rate-percentage">49%</h3>
-      </div>
-      <div class="d-none d-md-block">
-        <p class="statistics-title">Avg. Time on Trade</p>
-        <h3 class="rate-percentage">3h 25m</h3>
-      </div>
-      <div>
-        <p class="statistics-title">Max dropdown</p>
-        <h3 class="rate-percentage">11%</h3>
-      </div>
-      <div class="d-none d-md-block">
-        <p class="statistics-title">Max profit</p>
-        <h3 class="rate-percentage">9%</h3>
-      </div>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>TradePulse - Home</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="/static/assets/img/favicon.png" rel="icon">
+  <link href="/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="/static/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Dewi
+  * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="/" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">TradePulse</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="cta-btn" href="/overview">Get Started</a>
+
     </div>
-  </div>
-</div>
-<!-- Основные графики -->
-<div class="row mt-2">
+  </header>
 
-  <!-- Левая колонка -->
-  <div class="col-lg-8">
+  <main class="main">
 
-    <!-- График роста/убытка портфеля -->
-    <div class="card card-rounded mb-3">
-      <div class="card-body">
-        <h4 class="card-title">График роста/убытка портфеля</h4>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
 
-        <div style="height:350px;">
-          <canvas id="performaneLine"></canvas>
-        </div>
+      <img src="/static/assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
 
-        <!-- Отдельный блок для баланса -->
-        <div class="performance-info" style="margin-top: 15px; text-align: center; font-weight: bold;">
-          <span id="startBalance" style="color:#6B778C; margin-right: 25px;">Start: 0 </span>
-          <span id="finalBalance" style="color:#304dca; margin-right: 25px;">Balance: 0</span>
-          <span class="text-success" id="pnl" style="color:#28a745;">P&L: 0</span>
+      <div class="container d-flex flex-column align-items-center">
+        <h2 data-aos="fade-up" data-aos-delay="100">Empower Your Trading</h2>
+        <p data-aos="fade-up" data-aos-delay="200">Analyze markets, make informed decisions, grow your portfolio.</p>
+        <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="/overview" class="btn-get-started">Get started</a>
         </div>
       </div>
-    </div>
 
-    <!-- Общая прибыль -->
-    <div class="card card-rounded">
-      <div class="card-body">
-        <!-- Заголовок и селект -->
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <div>
-            <h4 class="card-title mb-0">Общая прибыль в течение года</h4>
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3>Voluptatem dignissimos provident laboris nisi ut aliquip ex ea commodo</h3>
+            <img src="/static/assets/img/about.jpg" class="img-fluid rounded-4 mb-4" alt="">
+            <p>Ut fugiat ut sunt quia veniam. Voluptate perferendis perspiciatis quod nisi et. Placeat debitis quia recusandae odit et consequatur voluptatem. Dignissimos pariatur consectetur fugiat voluptas ea.</p>
+            <p>Temporibus nihil enim deserunt sed ea. Provident sit expedita aut cupiditate nihil vitae quo officia vel. Blanditiis eligendi possimus et in cum. Quidem eos ut sint rem veniam qui. Ut ut repellendus nobis tempore doloribus debitis explicabo similique sit. Accusantium sed ut omnis beatae neque deleniti repellendus.</p>
           </div>
-          <div>
-            <select id="yearSelect" class="form-select form-select-sm"></select>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+              </ul>
+              <p>
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+              </p>
+
+              <div class="position-relative mt-4">
+                <img src="/static/assets/img/about-2.jpg" class="img-fluid rounded-4" alt="">
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Основная цифра, валюта и процент -->
-        <div class="d-flex align-items-baseline justify-content-start mb-3" style="gap: 15px; height: 100px;">
-          <h2 class="fw-bold mb-0">$36,2531.00</h2>
-          <h4 class="mb-0">USD</h4>
-          <h4 class="text-success mb-0">(+1.37%)</h4>
+      </div>
+
+    </section><!-- /About Section -->
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Necessitatibus eius consequatur</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 ">
+            <div class="row gy-4">
+
+              <div class="col-lg-12">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>A108 Adam Street, New York, NY 535022</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>+1 5589 55488 55</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>info@example.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+          </div>
+      </div>
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="#" class="logo d-flex align-items-center">
+            <span class="sitename">TradePulse</span>
+          </a>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
         </div>
 
-        <!-- График -->
-        <div style="height: 350px;">
-          <canvas id="marketingOverview"></canvas>
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+          </ul>
         </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
       </div>
     </div>
 
-  </div>
-
-  <!-- Правая колонка -->
-  <div class="col-lg-4 d-flex flex-column">
-
-    <!-- Винрейт по парам --> 
-    <div class="card card-rounded mb-3">
-      <div class="card-body">
-        <h4 class="card-title">Винрейт по парам</h4>
-        <div style="height: 254px;">
-          <canvas id="doughnutChart"></canvas>
-        </div>
-        <!-- контейнер для кастомной легенды -->
-        <div id="custom-legend"></div>
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Dewi</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon
       </div>
     </div>
 
+  </footer>
 
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Leave Report -->
-    <div class="card card-rounded">
-      <div class="card-body">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <h4 class="card-title card-title-dash">Статистика за неделю</h4>
-        </div>
-        <div style="height:445px;">
-          <canvas id="leaveReport"></canvas>
-        </div>
-        <!-- P&L за неделю -->
-        <div class="text-success" id="weeklyPnL" style="margin-top:10px; text-align:center; font-weight:bold; font-size:14px;">
-          P&L за неделю: 0
-        </div>
-      </div>
-    </div>
+  <!-- Preloader -->
+  <div id="preloader"></div>
 
+  <!-- Vendor JS Files -->
+  <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/static/assets/vendor/aos/aos.js"></script>
+  <script src="/static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/static/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="/static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  </div>
-</div>
+  <!-- Main JS File -->
+  <script src="/static/assets/js/main.js"></script>
 
-{% endblock %}
+</body>
+
+</html>
