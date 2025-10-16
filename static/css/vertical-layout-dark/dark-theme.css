@@ -1,0 +1,214 @@
+/* ==== Тёмная тема с современными цветами ==== */
+html[data-theme="dark"] {
+  --bg-color: rgb(19, 19, 19);
+  --card-bg: #000000;
+  --text-color: #e6e6f0;
+  --border-color: rgb(19, 19, 19);
+  --navbar-bg: rgb(19, 19, 19);
+  --sidebar-bg: rgb(19, 19, 19);
+  --link-color: #5ea0ff;
+  --link-hover: #8ac0ff;
+  --success-color: #4dd964;
+  --warning-color: #ffca3a;
+  --danger-color: #ff5a5a;
+  --primary-gradient-start: #4e7fff;
+  --primary-gradient-end: #7fb3ff;
+  --btn-shadow: rgba(78,127,255,0.25);
+}
+
+/* ==== Исправление белой полоски под nav-tabs ==== */
+html[data-theme="dark"] .d-sm-flex.border-bottom {
+  border-bottom: 1px solid black !important;
+}
+
+/* ===== Базовые элементы ===== */
+html[data-theme="dark"] body {
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Карточки */
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .card-body {
+  background-color: var(--card-bg) !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Navbar */
+html[data-theme="dark"] .navbar,
+html[data-theme="dark"] .navbar * {
+  background-color: var(--navbar-bg) !important;
+  color: var(--text-color) !important;
+}
+
+html[data-theme="dark"] .navbar .welcome-text,
+html[data-theme="dark"] .navbar .welcome-sub-text,
+html[data-theme="dark"] .navbar .dropdown-item,
+html[data-theme="dark"] .navbar .dropdown-header p,
+html[data-theme="dark"] .navbar-brand {
+  color: var(--text-color) !important;
+}
+
+/* Tabs */
+html[data-theme="dark"] .nav-tabs {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 8px 8px 0 0;
+  padding: 4px 0;
+}
+
+html[data-theme="dark"] .nav-tabs .nav-link {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  border: none !important;
+  margin-right: 5px !important;
+  border-radius: 6px !important;
+}
+
+html[data-theme="dark"] .nav-tabs .nav-link.active {
+  color: #dbe3ff !important; /* мягкий светлый текст вместо белого */
+  background: linear-gradient(135deg, #5e85ff, #5075e8);
+  border-color: var(--border-color);
+  box-shadow: inset 0 0 10px rgba(121,166,255,0.25);
+}
+
+/* Sidebar */
+html[data-theme="dark"] .sidebar {
+  background-color: var(--sidebar-bg) !important;
+  overflow: hidden; /* предотвращает выход элементов за границы */
+}
+
+html[data-theme="dark"] .sidebar .nav-link,
+html[data-theme="dark"] .sidebar .menu-title {
+  color: var(--text-color) !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* текст не вываливается при закрытии */
+}
+
+html[data-theme="dark"] .sidebar .nav-link:hover,
+html[data-theme="dark"] .sidebar .menu-title:hover {
+  color: #cfd1e0 !important;
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 6px;
+}
+
+/* Активный элемент sidebar */
+html[data-theme="dark"] .sidebar .nav-link.active {
+  background: linear-gradient(135deg, #5e85ff, #5075e8) !important;
+  color: #e6ebff !important;
+  box-shadow: inset 0 0 6px rgba(90,125,255,0.3);
+}
+
+/* Статистика */
+html[data-theme="dark"] .statistics-details {
+  padding: 12px;
+}
+html[data-theme="dark"] .statistics-details .text-success {
+  color: var(--success-color) !important;
+}
+html[data-theme="dark"] .statistics-details .text-warning {
+  color: var(--warning-color) !important;
+}
+html[data-theme="dark"] .statistics-details .text-danger {
+  color: var(--danger-color) !important;
+}
+
+/* Content wrapper */
+html[data-theme="dark"] .content-wrapper,
+html[data-theme="dark"] .home-tab,
+html[data-theme="dark"] .row,
+html[data-theme="dark"] .col-sm-12,
+html[data-theme="dark"] .col-lg-8,
+html[data-theme="dark"] .col-lg-4,
+html[data-theme="dark"] .main-panel,
+html[data-theme="dark"] .footer,
+html[data-theme="dark"] .settings-panel {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Ссылки */
+html[data-theme="dark"] a {
+  color: var(--link-color) !important;
+  text-decoration: none;
+}
+html[data-theme="dark"] a:hover {
+  color: var(--link-hover) !important;
+  text-decoration: underline;
+}
+
+/* Таблицы */
+html[data-theme="dark"] table {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color);
+}
+
+/* Иконки */
+html[data-theme="dark"] .mdi,
+html[data-theme="dark"] .fa,
+html[data-theme="dark"] .ti {
+  color: var(--text-color) !important;
+}
+
+/* ==== Белый текст на карточках и таблицах ==== */
+html[data-theme="dark"] .card *,
+html[data-theme="dark"] .card-body *,
+html[data-theme="dark"] table *,
+html[data-theme="dark"] .statistics-details * {
+  color: #e6e6f0 !important;
+}
+
+/* ==== Исправление ярко-белого свечения у sidebar-кнопок ==== */
+html[data-theme="dark"] .sidebar .nav-link {
+  background: transparent !important;
+  color: #d0d4e6 !important;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* При наведении */
+html[data-theme="dark"] .sidebar .nav-link:hover {
+  background: rgba(100, 120, 255, 0.12) !important;
+  color: #e0e6ff !important;
+}
+
+/* При клике или активной вкладке */
+html[data-theme="dark"] .sidebar .nav-link.active,
+html[data-theme="dark"] .sidebar .nav-link:focus,
+html[data-theme="dark"] .sidebar .nav-link:active {
+  background: linear-gradient(135deg, #4e7fff, #5a7dff) !important;
+  color: #f0f4ff !important;
+  box-shadow: inset 0 0 10px rgba(90, 125, 255, 0.25);
+  border-radius: 6px;
+}
+
+/* Когда sidebar закрыт (чтобы не было белого при фокусе на иконках) */
+html[data-theme="dark"] .sidebar.sidebar-offcanvas .nav-link:focus {
+  background: transparent !important;
+  color: #d0d4e6 !important;
+}
+
+/* ==== Убираем подчёркивание у всех ссылок ==== */
+html[data-theme="dark"] a,
+html[data-theme="dark"] .sidebar .nav-link,
+html[data-theme="dark"] .navbar .nav-link,
+html[data-theme="dark"] .card a {
+  text-decoration: none !important;
+  box-shadow: none !important; /* если тема добавляет glow-подсветку */
+  outline: none !important;
+}
+
+/* Даже при наведении или фокусе */
+html[data-theme="dark"] a:hover,
+html[data-theme="dark"] a:focus,
+html[data-theme="dark"] .sidebar .nav-link:hover,
+html[data-theme="dark"] .sidebar .nav-link:focus,
+html[data-theme="dark"] .navbar .nav-link:hover,
+html[data-theme="dark"] .navbar .nav-link:focus {
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+

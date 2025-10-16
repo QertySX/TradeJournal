@@ -30766,46 +30766,44 @@ div.tagsinput span.tag a {
   }
 }
 
-/*# sourceMappingURL=../maps/vertical-layout-light/style.css.map */
-
-
-/* Светлый вариант */
-.card.card-stats {
-  border: none;
-  border-radius: 18px;
-  background: #ffffff; /* белый фон */
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  transition: all 0.25s ease;
-  color: #2d2d2d; /* тёмно-серый текст */
+/* ==== Кнопка переключения темы ==== */
+#theme-toggle {
+  position: fixed;
+  top: 14px;
+  right: 50px; /* немного левее */
+  z-index: 2000;
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  transition: all 0.25s ease-in-out;
 }
 
-.card.card-stats:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+#theme-toggle:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(80,120,255,0.35);
+  border-color: var(--link-color);
 }
 
-/* Цветовые акценты */
-.card-primary {
-  border-left: 5px solid #4e73df; /* цветовая полоска сбоку */
+/* Светлая тема — другая подсветка */
+html[data-theme="light"] #theme-toggle {
+  background: #fff;
+  color: #333;
+  border: 1px solid #ccc;
 }
 
-.card-info {
-  border-left: 5px solid #36b9cc;
-}
-
-.card-success {
-  border-left: 5px solid #1cc88a;
-}
-
-.card-secondary {
-  border-left: 5px solid #858796;
-}
-
-/* Иконка */
-.icon-big {
-  font-size: 2.5rem;
-  color: #4e73df; /* иконка окрашивается в акцентный цвет */
-  margin-right: 12px;
+html[data-theme="light"] #theme-toggle:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  border-color: #666;
 }
 
 
