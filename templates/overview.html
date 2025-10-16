@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Статистика сверху -->
+<div class="row">
+  <div class="col-sm-12">
+    <div class="statistics-details d-flex align-items-center justify-content-between">
+      <div>
+        <p class="statistics-title">Balance</p>
+        <h3 class="rate-percentage">22 700$</h3>
+        <p class="text-success d-flex"><i class="mdi mdi-menu-down"></i><span>1.31%</span></p>
+      </div>
+      <div>
+        <p class="statistics-title">Winrate %</p>
+        <h3 class="rate-percentage">49%</h3>
+      </div>
+      <div class="d-none d-md-block">
+        <p class="statistics-title">Avg. Time on Trade</p>
+        <h3 class="rate-percentage">3h 25m</h3>
+      </div>
+      <div>
+        <p class="statistics-title">Max dropdown</p>
+        <h3 class="rate-percentage">11%</h3>
+      </div>
+      <div class="d-none d-md-block">
+        <p class="statistics-title">Max profit</p>
+        <h3 class="rate-percentage">9%</h3>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Основные графики -->
+<div class="row mt-2">
+
+  <!-- Левая колонка -->
+  <div class="col-lg-8">
+
+    <!-- График роста/убытка портфеля -->
+    <div class="card card-rounded mb-3">
+      <div class="card-body">
+        <h4 class="card-title">График роста/убытка портфеля</h4>
+
+        <div style="height:350px;">
+          <canvas id="performaneLine"></canvas>
+        </div>
+
+        <!-- Отдельный блок для баланса -->
+        <div class="performance-info" style="margin-top: 15px; text-align: center; font-weight: bold;">
+          <span id="startBalance" class="balance">Start: 0</span>
+          <span id="finalBalance" margin-right: 25px;">Balance: 0</span>
+          <span class="text-success" id="pnl">P&L: 0</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Общая прибыль -->
+    <div class="card card-rounded">
+      <div class="card-body">
+        <!-- Заголовок и селект -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div>
+            <h4 class="card-title mb-0">Общая прибыль в течение года</h4>
+          </div>
+          <div>
+            <select id="yearSelect" class="form-select form-select-sm"></select>
+          </div>
+        </div>
+
+        <!-- Основная цифра, валюта и процент -->
+        <div class="d-flex align-items-baseline justify-content-start mb-3" style="gap: 15px; height: 100px;">
+          <h2 class="fw-bold mb-0">$36,2531.00</h2>
+          <h4 class="mb-0">USD</h4>
+          <h4 class="text-success mb-0">(+1.37%)</h4>
+        </div>
+
+        <!-- График -->
+        <div style="height: 350px;">
+          <canvas id="marketingOverview"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Правая колонка -->
+  <div class="col-lg-4 d-flex flex-column">
+
+    <!-- Винрейт по парам --> 
+    <div class="card card-rounded mb-3">
+      <div class="card-body">
+        <h4 class="card-title">Винрейт по парам</h4>
+        <div style="height: 254px;">
+          <canvas id="doughnutChart"></canvas>
+        </div>
+        <!-- контейнер для кастомной легенды -->
+        <div id="custom-legend"></div>
+      </div>
+    </div>
+
+
+
+    <!-- Leave Report -->
+    <div class="card card-rounded">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="card-title card-title-dash">Статистика за неделю</h4>
+        </div>
+        <div style="height:445px;">
+          <canvas id="leaveReport"></canvas>
+        </div>
+        <!-- P&L за неделю -->
+        <div class="text-success" id="weeklyPnL" style="margin-top:10px; text-align:center; font-weight:bold; font-size:14px;">
+          P&L за неделю: 0
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+{% endblock %}
