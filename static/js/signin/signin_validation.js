@@ -19,7 +19,7 @@ $(function () {
 
         if (response.status === 'success') {
           setTimeout(() => {
-            window.location.href = '/index';
+            window.location.href = '/overview';
           }, 1000);
         }
       },
