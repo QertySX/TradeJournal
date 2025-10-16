@@ -87,7 +87,7 @@ async def login_user(request: Request, user_data: AuthSchema = Depends(GetForm.a
         key="access_token",
         value=f"Bearer {token}",
         httponly=True,
-        max_age=int(ACCESS_TOKEN_EXPIRE)*60
+        max_age=int(ACCESS_TOKEN_EXPIRE)
     )
     return response
 
